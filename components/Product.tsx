@@ -5,13 +5,14 @@ import Link from "next/link";
 import "@/css/product.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { StaticImageData } from "next/dist/shared/lib/get-img-props";
 
 type productProps = {
-  id: string | any;
-  name: string | any;
-  price: number | any;
-  category: string | any;
-  image: string | any;
+  id: string;
+  name: string;
+  price: number;
+  category: string;
+  image: StaticImageData;
 };
 
 function formartPrice(price: number) {

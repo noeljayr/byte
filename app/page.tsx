@@ -1,5 +1,4 @@
 import Image from "next/image";
-import macbookPro from "@/public/images/laptops/productivity/mac.png";
 import Link from "next/link";
 import { TickCircle } from "iconsax-react";
 import Product from "@/components/Product";
@@ -56,14 +55,14 @@ function Home() {
 
       <div className="products grid gap-8">
         {productsData.map((product) => (
-          <Product
-            key={product?.id}
-            id={product?.id}
-            name={product?.name}
-            price={product?.price}
-            category={product?.category}
-            image={product?.image}
-          />
+          product? <Product
+          key={product.id}
+          id={product.id}
+          name={product.name}
+          price={product.price}
+          category={product.category}
+          image={product.image}
+        /> : <></>
         ))}
       </div>
     </div>
