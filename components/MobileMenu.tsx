@@ -42,7 +42,7 @@ function MobileMenu() {
         </Link>
         <Link
           onClick={() => setActive(!active)}
-          href="search"
+          href="#search"
           className="font-semibold"
         >
           Search

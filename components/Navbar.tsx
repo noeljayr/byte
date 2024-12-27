@@ -25,7 +25,7 @@ function Navbar() {
       <Link className="link font-semibold" href="/#categories">
         Categories
       </Link>
-      <Link href="search" className="link ml-auto flex items-center relative">
+      <Link href="#search" className="link ml-auto flex items-center relative">
         <SearchNormal1 size="32" color="#101247" />
       </Link>
       <Cart />
