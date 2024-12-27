@@ -1,0 +1,29 @@
+.search {
+  background-color: var(--white);
+  border-radius: 1.8rem;
+  padding-left: var(--padding);
+  width: calc(100% -4rem);
+}
+
+.search input {
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+  padding-left: 1rem;
+  border: 0;
+  outline: 0;
+  height: 2.8rem;
+}
+
+.search svg {
+  height: 1.2rem;
+}
+.search input::placeholder {
+  color: var(--black);
+  opacity: 0.6;
+}
+
+.product-search {
+  min-height: 50vh;
+  margin-top: 2rem;
+}

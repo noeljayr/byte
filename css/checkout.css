@@ -1,0 +1,268 @@
+.checkout-page {
+  transition: var(--transition);
+}
+
+.checkout-container input {
+  background-color: transparent;
+  height: 2.5rem;
+  padding: 0.65rem;
+  padding-left: 0;
+  font-weight: 600;
+  border: 0px solid var(--secondary);
+  border-bottom: 1px solid var(--secondary);
+  border-radius: 0px;
+  outline: 0;
+  display: flex;
+  align-items: center;
+}
+
+.checkout-container button {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.filled-customer-details button {
+  pointer-events: all;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.checkout-container .phone input {
+  padding-left: 2.5rem;
+}
+
+.checkout-container #phyical {
+  border-bottom: 1px solid transparent;
+}
+
+#description {
+  display: none;
+}
+
+#amount {
+  display: none;
+}
+
+.checkout-container {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 45% 50%;
+  width: 90%;
+  height: 98%;
+  align-items: center;
+  border-radius: var(--radius);
+  padding: 0.5rem;
+  gap: 2.5%;
+  padding-right: 2.5%;
+  transition: var(--transition);
+}
+
+.payment-successful .checkout-container {
+  width: 15rem;
+  height: 10rem;
+  display: flex;
+  padding: 0;
+}
+
+.payment-successful  h3{
+  color: var(--primary);
+}
+
+.checkout-product-info {
+  height: 100%;
+  width: 100%;
+  background-color: var(--secondary);
+  border-radius: calc(var(--radius) * 0.8);
+}
+
+@media screen and (max-width: 640px) {
+  .checkout-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-right: 0.5rem;
+    width: 98%;
+    height: fit-content;
+  }
+  .customer-details {
+    width: 95%;
+  }
+
+  .checkout-product-info {
+    height: 15rem;
+  }
+}
+
+.checkout-container button svg {
+  height: 0.9rem;
+  width: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+.checkout-container svg path {
+  stroke-width: 3px;
+}
+
+.checkout-container h3 {
+  font-size: var(--font-ss);
+  opacity: 65%;
+}
+
+.methods {
+  grid-template-columns: 1fr 1fr;
+}
+
+.methods span {
+  height: 3rem;
+  border: 1px solid var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  user-select: none;
+}
+
+.methods .selected {
+  border: 1px solid var(--primary);
+  background-color: hsl(234, 67%, 98%);
+  color: var(--primary);
+}
+
+.checkout-container .details {
+  border: 1px solid var(--secondary);
+  border-radius: var(--radius-sm);
+  padding: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.checkout-container .details .grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 500px) {
+  .checkout-container .details .grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .checkout-container .phone input {
+    width: 100%;
+  }
+}
+
+.checkout-container h1 {
+  color: var(--primary);
+  font-weight: 900;
+}
+
+.checkout-product-info img {
+  width: 5.5rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.check-product-image .image {
+  height: 7rem;
+  width: 7rem;
+  border: 1px solid var(--grey);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.secure span {
+  font-size: 0.6rem;
+}
+
+.secure svg {
+  height: 0.75rem;
+  width: 0.75rem;
+}
+
+.secure svg path {
+  fill: green;
+}
+
+
+.svg-success {
+  display: inline-block;
+  vertical-align: top;
+  height: 3rem;
+  width: 3rem;
+  opacity: 1;
+  overflow: visible;
+}
+@keyframes success-tick {
+  0% {
+    stroke-dashoffset: 16px;
+    opacity: 1;
+ }
+  100% {
+    stroke-dashoffset: 31px;
+    opacity: 1;
+ }
+}
+@keyframes success-circle-outline {
+  0% {
+    stroke-dashoffset: 72px;
+    opacity: 1;
+ }
+  100% {
+    stroke-dashoffset: 0px;
+    opacity: 1;
+ }
+}
+@keyframes success-circle-fill {
+  0% {
+    opacity: 0;
+ }
+  100% {
+    opacity: 1;
+ }
+}
+.svg-success .success-tick {
+  fill: none;
+  stroke-width: 1px;
+  stroke: #fff;
+  stroke-dasharray: 15px, 15px;
+  stroke-dashoffset: -14px;
+  animation: success-tick 450ms ease 1400ms forwards;
+  opacity: 0;
+}
+.svg-success .success-circle-outline {
+  fill: none;
+  stroke-width: 1px;
+  stroke: #81c038;
+  stroke-dasharray: 72px, 72px;
+  stroke-dashoffset: 72px;
+  animation: success-circle-outline 300ms ease-in-out 800ms forwards;
+  opacity: 0;
+}
+.svg-success .success-circle-fill {
+  fill: #81c038;
+  stroke: none;
+  opacity: 0;
+  animation: success-circle-fill 300ms ease-out 1100ms forwards;
+}
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+  .svg-success .success-tick {
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+    animation: none;
+    opacity: 1;
+ }
+  .svg-success .success-circle-outline {
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+    animation: none;
+    opacity: 1;
+ }
+  .svg-success .success-circle-fill {
+    animation: none;
+    opacity: 1;
+ }
+}

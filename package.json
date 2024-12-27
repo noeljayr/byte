@@ -9,19 +9,25 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/plus-jakarta-sans": "^5.1.0",
+    "@tabler/icons-react": "^3.26.0",
+    "dotenv": "^16.4.7",
+    "iconsax-react": "^0.0.8",
+    "mzunipay-sdk": "^1.0.56",
+    "next": "15.1.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.1.2"
+    "zustand": "^5.0.2"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
     "eslint": "^9",
     "eslint-config-next": "15.1.2",
-    "@eslint/eslintrc": "^3"
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
   }
 }
